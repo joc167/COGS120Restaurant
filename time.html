@@ -1,0 +1,161 @@
+<html>
+
+	<head>
+		<title> time </title>
+		<style>
+			body{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+			}
+			
+			
+		</style>
+		<style>
+.dropbtn , .dropbtn1 {
+    background-color: #3498DB;
+    margin: 3px;
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+	
+</head>
+	
+<body>
+<!------------------------------------- ----------------------------------------------------------------------------->
+<div class="container" style=" align:center; border: 1px solid #ccc; padding: 20px; width: 200px;">
+    
+		  <h1>Second Page</h1>
+
+			
+			<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Time</button>
+  <div id="myDropdown" class="dropdown-content">
+<a href="#home">.....</a>
+<a href="#home">7:30 pm</a>
+<a href="#home">8:00 pm</a>
+<a href="#home">8:30 pm</a>
+<a href="#home">9:00 pm</a>
+<a href="#home">9:30 pm</a>
+<a href="#home">10:00 pm</a>
+<a href="#home">10:30 pm</a>
+<a href="#home">11:00 pm</a>
+<a href="#home">11:30 pm</a>
+<a href="#home">......</a>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<!------------------------------------------------------------   ---------------------------------------------------------------------->
+
+
+
+		      <input class="dropbtn1" style="float: left" type="submit" value="Current" ></input>
+     
+     
+				<div style="border:2px solid #ccc; width:200px; height: 300px; overflow-y: scroll;" class="container">
+  
+				      <p>1. RestaurantA  00:00</p>
+      
+					<p>2. RestaurantB  00:00</p>
+     
+					   <p>3. RestaurantC  00:00</p>
+     
+					   <p>4. RestaurantD  00:00</p>
+        
+					<p>5. RestaurantE  00:00</p>
+    
+				  </div>
+    
+			  <a href="file:///C:/Users/Joeyi/Desktop/cogs120/homepage.html">
+			  <input style="margin-left: 160px" type="submit" value="HOME" ></input>
+
+</a>
+			 <!-- scrollbar
+      <div style="border:2px solid #ccc; width:100px; height: 100px; overflow-y: scroll;" class="container">
+       
+			   <input type="submit" value="00:00"><br />
+     
+			     <input type="submit" value="00:00"><br />
+       
+				   <input type="submit" value="00:00"><br />
+       
+				   <input type="submit" value="00:00"><br />
+     
+				     <input type="submit" value="00:00"><br />
+     
+				     <input type="submit" value="00:00"><br />
+   
+				       <input type="submit" value="00:00"><br />
+      
+					    <input type="submit" value="00:00"><br />
+  
+				        <input type="submit" value="00:00"><br />
+      
+				    <input type="submit" value="00:00"><br />
+   
+				   </div>
+      -->
+   
+				 </div>
+		
+
+</body>
+</html>
