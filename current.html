@@ -4,7 +4,7 @@
 	<title> time </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="theme.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
@@ -144,6 +144,23 @@ text-align: center;
 				}
 			}
 		}
+
+		function cFunct() {
+		    document.getElementById("heart1").style.color = "red";
+		}
+		function dFunct() {
+				document.getElementById("heart2").style.color = "red";
+		}
+		function eFunct() {
+				document.getElementById("heart3").style.color = "red";
+		}
+		function fFunct() {
+				document.getElementById("heart4").style.color = "red";
+		}
+		function gFunct() {
+				document.getElementById("heart5").style.color = "red";
+		}
+
 		</script>
 
 		<!---------------------------------------------------------------------->
@@ -156,43 +173,38 @@ text-align: center;
 				<table align="center">
 		    <!-- <div class="list" > -->
 					<tr >
-						<td>1. RestaurantA 00:05
-						<a href="p3.html">
+						<td>
+						<a href="p3.html">	1. RestaurantA 00:05 </a>
+
 						<!--<input type="button" id='heart'  class="favbutton"></input> -->
-						<i style="font-size:24px" class="fa">&#xf08a;</i>
-					 </a>
+					<i style="font-size:24px" onclick="cFunct()" id="heart1" class="fa">&#xf004;</i>
+
 					</td>
 				</tr>
 					<tr>
-						<td> 2. RestaurantB 00:06
-						<a href="p3.html">
-						<!--<input type="button" id='heart'  class="favbutton"></input> -->
-					  <i style="font-size:24px" class="fa">&#xf08a;</i>
-						</a>
+						<td>
+							<a href="p3.html"> 2. RestaurantB 00:06 </a>
+					  		<i style="font-size:24px" onclick="dFunct()" id="heart2" class="fa">&#xf004;</i>
 					</td>
 				</tr>
 					<tr>
-						<td> 3.  RestaurantC 00:07
-						<a href="p3.html">
+						<td>
+						<a href="p3.html">  3.  RestaurantC 00:07 </a>
 						<!--<input type="button" id='heart'  class="favbutton"></input> -->
-						<i style="font-size:24px" class="fa">&#xf08a;</i>
-						</a>
+						<i style="font-size:24px" onclick="eFunct()" id="heart3" class="fa">&#xf004;</i>
 					</td>
 				</tr>
 				<tr>
-					<td> 4. RestaurantD 00:10
-					<a href="p3.html">
-					<!--<input type="button" id='heart'  class="favbutton"></input> -->
-					<i style="font-size:24px" class="fa">&#xf08a;</i>
-					 </a>
+					<td>
+					<a href="p3.html"> 4. RestaurantD 00:10 </a>
+				<i style="font-size:24px" onclick="fFunct()" id="heart4" class="fa">&#xf004;</i>
 				</td>
 			</tr>
 				<tr>
-					<td> 5.  RestaurantE  00:15
-					<a href="p3.html">
+					<td>
+					<a href="p3.html">  5.  RestaurantE  00:15 </a>
 					<!--<input type="button" id='heart'  class="favbutton"></input> -->
-					<i style="font-size:24px" class="fa">&#xf08a;</i>
-					</a>
+					<i style="font-size:24px" onclick="gFunct()" id="heart5" class="fa">&#xf004;</i>
 				</td>
 				</tr>
 					</table>
