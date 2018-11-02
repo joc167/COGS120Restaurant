@@ -1,0 +1,31 @@
+
+
+.screen {
+  align:center;
+  padding: 20px;
+}
+
+.list {
+  width: auto;
+  height: auto;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+h1, h2 {
+  margin-top: 0px;
+}
+
+.restaurant {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.favbutton {
+  margin-left: 0px;
+  color: black;
+}
+
+button p{
+  font-size: 30px;
+}
