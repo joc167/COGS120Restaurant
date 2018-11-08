@@ -9,6 +9,7 @@
   {'title': 'Rubios', 'waitTime' : 8, 'index': 6},
   {'title': 'Santorini', 'waitTime' : 11, 'index': 7},
   {'title': 'Seed&Sprouts', 'waitTime' : 15, 'index': 8},
+  {'title': 'PandaExpress', 'waitTime' : 16, 'index': 9},
 ]
 
 // Call this function when the page loads (the "ready" event)
