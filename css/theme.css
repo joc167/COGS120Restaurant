@@ -189,7 +189,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .buttonfav{
   margin-top: 0.6vh;
-  margin-right: 3vw;
   float: right;
 }
 
@@ -252,4 +251,24 @@ height: 8%;
 
 #wt{
   float:right;
+  margin-right: 2vw;
+}
+
+#time{
+  float:left;
+  margin-left: 2vw;
+}
+
+#colon{
+  float:left;
+  margin-left: 9vw;
+}
+
+.alltime table{
+  margin-top:2vh;
+  font-size: 22px;
+}
+
+.alltime span{
+  color: #1dc8cd;
 }

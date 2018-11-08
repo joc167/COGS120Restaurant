@@ -1,60 +1,57 @@
 <html>
 <head>
-  <title> All Time </title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/theme.css">
+	<title> home </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <style>
-    .container{
-      border:2px solid #ccc;
-      width:300px;
-      height: 400px;
-      overflow-y: scroll;
-    }
+	<!-- Libraries CSS Files -->
+	<link href="lib/animate/animate.min.css" rel="stylesheet">
+	<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+	<link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
 
-  </style>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Montserrat');
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+	</style>
 </head>
 
 <body>
-  <div class="screen">
-    <h2> All Time For Selected Restaurant </h2>
+  <button class="homebtn" onclick="javascript:window.location.href='index.html';"><i class="fa fa-home"></i></button>
+  <header id="header">
+      <div id="logo" class="pull-left">
+        <h1><a href="index.html" class="scrollto">WaitLess</a></h1>
+      </div>
+  </header><!-- #header -->
 
-    <div class="container">
+  <section id="intro">
+    <div class="intro-text">
+        <h1 align="center"> Wait Time For </span></h1>
+    </div>
+  </section>
 
-
+  <div class="container">
 			<!-- remember to put Handlebars templates within script tags so that the
 			webpage doesn't attempt to load them as HTML -->
 			<script id="entry-template" type="text/x-handlebars-template">
-				<div class="project" id="project{{index}}">
-					<a href="#" class="thumbnail">
-						<table style="height:10%">
-							<tr>
-								<td style="width:5px">	{{index}}. </td>
-								<td>	{{time}} : {{waitTime}} mins
-								</td>
-							</tr>
-						</table>
-					</a>
-				</div>
+				<tr>
+					<td>
+            <span id='time'>&nbsp&nbsp {{time}}</span>
+            <span id='colon'> : </span>
+            <span id='wt'>{{waitTime}} min(s) &nbsp&nbsp</span></td>
+				</tr>
 			</script>
 
-			<div id="templatedProjects">
-				<!-- we will inject templated project HTML code into here -->
-			</div>
+			<div class="list  alltime" >
+        <table id="templatedProjects" style="text-align:center;">
+      	<!-- we will inject templated project HTML code into here -->
+        </table>
+    	</div>
+	</div>
 
-		</div>
-
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/handlebars-v4.0.12.js"></script>
-    <script src="js/alltime.js"></script>
-
-    <button class="btn" onclick="goBack()">Go back</button>
-
-  </div>
+  <button class="backbtn" onclick="goBack()">Go back</button>
 
   <script>
     function goBack() {
@@ -62,5 +59,20 @@
     }
   </script>
 
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/handlebars-v4.0.12.js"></script>
+  <script src="js/alltime.js"></script>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
