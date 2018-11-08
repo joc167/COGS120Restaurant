@@ -4,9 +4,10 @@
 	<title> time </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="theme.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<style>
 	.dropbtn:hover, .dropbtn:focus {
 
@@ -43,10 +44,10 @@
 		width: 200px;
 	}
 
-	tr{
-		background-color: #eaeaea;
+	tr{background-color: d9d9d9;
 		 cellspacing:0;
 		 cellpadding:0;
+
 		}
 	td{ width:25%
 		border-collapse: collapse;
@@ -98,11 +99,11 @@ text-align: center;
 </head>
 
 <body>
+<div class="container">
 	<!-- ----------------------------------------------------------------------------->
 <!--	<div class="screen"> -->
 
-		<h1 align="center"> Current Wait Time <br> Ranking</h1>
-
+		<h1 align="center"> Current Wait Time</h1>
 		<div id="container">
 <button align="center" id="button1"  class="dropbtn"  class="btn"> <i class="fa fa-chevron-circle-down"></i>Current</button>
 
@@ -146,76 +147,58 @@ text-align: center;
 			}
 		}
 
-		function cFunct() {
-		    document.getElementById("heart1").style.color = "red";
-		}
-		function dFunct() {
-				document.getElementById("heart2").style.color = "red";
-		}
-		function eFunct() {
-				document.getElementById("heart3").style.color = "red";
-		}
-		function fFunct() {
-				document.getElementById("heart4").style.color = "red";
-		}
-		function gFunct() {
-				document.getElementById("heart5").style.color = "red";
-		}
-
 		</script>
 
+		<script>
+			function cFunct() {
+					document.getElementById("1").style.color = "red";
+			}
+	</script>
 		<!---------------------------------------------------------------------->
 
-		<!--- <input class="dropbtn1" style="float: left" type="submit" value="Current" ></input> -->
+		<!--- <input class="
 
+dropbtn1" style="float: left" type="submit" value="Current" ></input> -->
 
-		<div class="list">
 			<!-- <div class="screen"> -->
-				<table align="center">
-		    <!-- <div class="list" > -->
-					<tr >
-						<td>
-						<a href="p3.html">	1. RestaurantA 00:05 </a>
 
-						<!--<input type="button" id='heart'  class="favbutton"></input> -->
-					<i style="font-size:24px" onclick="cFunct()" id="heart1" class="fa">&#xf004;</i>
+			<div class="container">
 
+
+		<!-- remember to put Handlebars templates within script tags so that the
+		     webpage doesn't attempt to load them as HTML -->
+		<script id="entry-template" type="text/x-handlebars-template">
+
+				<div class="project" id="project{{index}}">
+					<a href="#" class="thumbnail">
+						<table style="height:10%">
+						<tr>
+								<td style="width:5px">	{{index}}. </td>
+					<td>	{{title}} {{waitTime}} mins
+						<i style="font-size:24px" onclick="cFunct()" id="{{index}}" class="fa">&#xf004;</i>
 					</td>
 				</tr>
-					<tr>
-						<td>
-							<a href="p3.html"> 2. RestaurantB 00:06 </a>
-					  		<i style="font-size:24px" onclick="dFunct()" id="heart2" class="fa">&#xf004;</i>
-					</td>
-				</tr>
-					<tr>
-						<td>
-						<a href="p3.html">  3.  RestaurantC 00:07 </a>
-						<!--<input type="button" id='heart'  class="favbutton"></input> -->
-						<i style="font-size:24px" onclick="eFunct()" id="heart3" class="fa">&#xf004;</i>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<a href="p3.html"> 4. RestaurantD 00:10 </a>
-				<i style="font-size:24px" onclick="fFunct()" id="heart4" class="fa">&#xf004;</i>
-				</td>
-			</tr>
-				<tr>
-					<td>
-					<a href="p3.html">  5.  RestaurantE  00:15 </a>
-					<!--<input type="button" id='heart'  class="favbutton"></input> -->
-					<i style="font-size:24px" onclick="gFunct()" id="heart5" class="fa">&#xf004;</i>
-				</td>
-				</tr>
-					</table>
-					<a href="index.html">
+			</table>
+					</a>
+
+				</div>
+		</script>
+
+		    <div id="templatedProjects">
+		      <!-- we will inject templated project HTML code into here -->
+		    </div>
+
+			</div>
+
+					<a href="homepage.html">
 					<!--	<input style="margin-left: 160px" type="submit" value="HOME" ></input> -->
-					<button style="margin-top: 10px;" class="dropbtn"><i class="fa fa-home"></i> Home</button>
+					<button  class="dropbtn"><i class="fa fa-home"></i> Home</button>
 		  <!--  </div> -->
-
-
 </div>
+<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/handlebars-v4.0.12.js"></script>
+	<script src="js/lab4.js"></script>
 
 </body>
 </html>
