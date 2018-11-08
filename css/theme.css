@@ -141,6 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 .list tr{
   background-color: #fff;
   padding:10px;
+  height:7vh;
   }
 
 .list td{ width:25vw;
@@ -150,16 +151,19 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0px 0px 10px rgba(73, 78, 92, 0.10);
 }
 
+.list {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .list table {
   width: 82vw;
-  height: 63vh;
-  font-size: 22px;
+  font-size: 20px;
   border-spacing: 2vh;
   transition: 0.5s;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2vh;
-  overflow:scroll;
+  margin-top: -2vh;
 }
 
 .dropbtn, .backbtn, .current-btn{
@@ -182,9 +186,10 @@ h1, h2, h3, h4, h5, h6 {
   float:right;
   margin-right:10vw;
 }
+
 .buttonfav{
   margin-top: 0.6vh;
-  margin-right: 4vw;
+  margin-right: 3vw;
   float: right;
 }
 
@@ -243,4 +248,8 @@ height: 8%;
   outline: none;
   cursor: pointer;
   display:inline;
+}
+
+#wt{
+  float:right;
 }

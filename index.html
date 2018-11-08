@@ -14,33 +14,46 @@
 	<link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
 
 	<style>
-	@import url('https://fonts.googleapis.com/css?family=Montserrat');
-	@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-	body{
-		background: url('bg.jpg') no-repeat center center fixed transparent/9,
-		linear-gradient(45deg, #1de099, #1dc8cd) no-repeat center center fixed;
-	}
+		@import url('https://fonts.googleapis.com/css?family=Montserrat');
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 	</style>
 </head>
 
 <body>
-	<div class="screen">
-		<h1 style="text-align:center"> Home Page </h1>
-		<table align="center">
+	<button class="homebtn" onclick="javascript:window.location.href='index.html';"><i class="fa fa-home"></i></button>
+	<header id="header">
+		<div class="container">
+			<div id="logo" class="pull-left">
+				<h1><a href="index.html" class="scrollto">WaitLess</a></h1>
+			</div>
+		</div>
+	</header><!-- #header -->
+
+	<div class="homediv container">
+		<table align="center"  >
 				<a href="current.html" >
-				<img src="clock.jpg"  alt="clockicon" style=" padding: 10px; display:block; margin-left:auto; margin-right:auto; width:150px; height: 150px;" >
-				<figcaption style="text-align:center;"> Restaurant Waiting Time </figcaption>
+					<img src="img/restaurant.png"  alt="clockicon" class="homeicon">
+					<p class="iconcaption"> Wait Time Ranking </p>
 				</a>
 		</table>
+
 		<table align="center">
 				<a href="favlist.html" >
-				<img src="heart.png"  alt="hearticon" style=" padding: 10px; display:block; margin-left:auto; margin-right:auto; width:150px; height: 150px;" >
-				<figcaption style="text-align:center;"> Favorite Restaurants </figcaption>
+					<img src="img/recipes.png"  alt="hearticon" class="homeicon">
+					<p class="iconcaption"> Favorites List</p>
 				</a>
 		</table>
-<!--	<input type="restaurants" id="res" value="search....."> </input>
-	<input button type="submit" value="Submit" > </button>
--->
-</div>
+	</div>
+
+	<!-- JavaScript Libraries -->
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/jquery/jquery-migrate.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="lib/easing/easing.min.js"></script>
+	<script src="lib/wow/wow.min.js"></script>
+	<script src="lib/superfish/hoverIntent.js"></script>
+	<script src="lib/superfish/superfish.min.js"></script>
+	<script src="lib/magnific-popup/magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
