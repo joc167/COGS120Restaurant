@@ -97,27 +97,29 @@
 		<!--- <input class="dropbtn1" style="float: left" type="submit" value="Current" ></input> -->
 
 
-		<div class="list">
-			<p class="restaurant">
-				<a href="p3.html"> 1. RestaurantA  00:05 </a>
-				<input type="button" class="favbutton"></input>
-			</p>
-			<p class="restaurant">
-				<a href="p3.html"> 2. RestaurantB  00:06 </a>
-				<input type="button" class="favbutton"></input>
-			</p>
-			<p class="restaurant">
-				<a href="p3.html"> 3. RestaurantC  00:07 </a>
-				<input type="button" class="favbutton"></input>
-			</p>
-			<p class="restaurant">
-				<a href="p3.html"> 4. RestaurantD  00:10 </a>
-				<input type="button" class="favbutton"></input>
-			</p>
-			<p class="restaurant">
-				<a href="p3.html"> 5. RestaurantE  00:15 </a>
-				<input type="button" class="favbutton"></input>
-			</p>
+		<div class="container">
+
+
+			<!-- remember to put Handlebars templates within script tags so that the
+			webpage doesn't attempt to load them as HTML -->
+			<script id="entry-template" type="text/x-handlebars-template">
+
+				<div class="projected" id="projected{{index}}">
+					<a href="#" class="thumbnail">
+						<table style="height:10%">
+							<tr>
+								<td style="width:5px">	{{index}}. </td>
+								<td>	{{title}} {{waitTime}} mins </td>
+							</tr>
+						</table>
+					</a>
+				</div>
+			</script>
+
+			<div id="templatedProjects">
+				<!-- we will inject templated project HTML code into here -->
+			</div>
+
 		</div>
 
 		<a href="index.html">
@@ -125,6 +127,11 @@
 		</a>
 
 </div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/handlebars-v4.0.12.js"></script>
+<script src="js/projectedTime.js"></script>
 
 </body>
 </html>
