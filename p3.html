@@ -22,16 +22,38 @@
   <div class="screen">
     <h2> All Time For Selected Restaurant </h2>
 
-    <div  class="list">
-      <p>  ......  </p>
-      <p>  3:30pm => 00:10 </p>
-      <p>  4:00pm => 00:10 </p>
-      <p>  4:30pm => 00:10 </p>
-      <p>  5:00pm => 00:15 </p>
-      <p> ......  </p>
-    </div>
+    <div class="container">
+
+
+			<!-- remember to put Handlebars templates within script tags so that the
+			webpage doesn't attempt to load them as HTML -->
+			<script id="entry-template" type="text/x-handlebars-template">
+				<div class="project" id="project{{index}}">
+					<a href="#" class="thumbnail">
+						<table style="height:10%">
+							<tr>
+								<td style="width:5px">	{{index}}. </td>
+								<td>	{{time}} : {{waitTime}} mins
+								</td>
+							</tr>
+						</table>
+					</a>
+				</div>
+			</script>
+
+			<div id="templatedProjects">
+				<!-- we will inject templated project HTML code into here -->
+			</div>
+
+		</div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/handlebars-v4.0.12.js"></script>
+    <script src="js/alltime.js"></script>
 
     <button class="btn" onclick="goBack()">Go back</button>
+
   </div>
 
   <script>
