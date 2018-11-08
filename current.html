@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="theme.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<style>
 	.dropbtn:hover, .dropbtn:focus {
@@ -45,160 +45,159 @@
 	}
 
 	tr{background-color: d9d9d9;
-		 cellspacing:0;
-		 cellpadding:0;
+		cellspacing:0;
+		cellpadding:0;
 
-		}
+	}
 	td{ width:25%
 		border-collapse: collapse;
 	}
 	table{
-				width:80%;
-				height:63%;
-				font-family: sans-serif;
-				font-size: 25px;
-				border-spacing: 10px;
+		width:80%;
+		height:63%;
+		font-family: sans-serif;
+		font-size: 25px;
+		border-spacing: 10px;
 	}
 	.dropbtn {
-	background-color: DodgerBlue;
-	border: none;
-	color: white;
-	padding: 12px 16px;
-	font-size: 16px;
-	cursor: pointer;
-	margin-left:auto;
-	margin-right:auto;
-	display:block;
+		background-color: DodgerBlue;
+		border: none;
+		color: white;
+		padding: 12px 16px;
+		font-size: 16px;
+		cursor: pointer;
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
 	}
 
 	.buttonfav{
-	width: 50px;
-	height: 50px;
-	top:50%;
-	position: fixed;
-	left: 50%;
-	margin-top: -45px;
-	margin-left: -50px;
-	border-radius: 5px;
-	background: none;
-	cursor: pointer;
+		width: 50px;
+		height: 50px;
+		top:50%;
+		position: fixed;
+		left: 50%;
+		margin-top: -45px;
+		margin-left: -50px;
+		border-radius: 5px;
+		background: none;
+		cursor: pointer;
 
 	}
 
 	#button1 , #button2{
-display:inline-block;
-margin-left: auto;
-margin-right: auto;
-height: 8%;
-}
-#container{
-text-align: center;
-}
+		display:inline-block;
+		margin-left: auto;
+		margin-right: auto;
+		height: 8%;
+	}
+	#container{
+		text-align: center;
+	}
 	</style>
 
 </head>
 
 <body>
-<div class="container">
-	<!-- ----------------------------------------------------------------------------->
-<!--	<div class="screen"> -->
+	<div class="container">
+		<!-- ----------------------------------------------------------------------------->
+		<!--	<div class="screen"> -->
 
 		<h1 align="center"> Current Wait Time</h1>
 		<div id="container">
-<button align="center" id="button1"  class="dropbtn"  class="btn"> <i class="fa fa-chevron-circle-down"></i>Current</button>
+			<button align="center" id="button1"  class="dropbtn"  class="btn"> <i class="fa fa-chevron-circle-down"></i>Current</button>
 
-		<div class="dropdown">
-<button align="center" id="button2" onclick="myFunction()" class="dropbtn" ><i class="fa fa-clock-o"></i>Time...</button>
-			<div id="myDropdown" class="dropdown-content">
-				<a href="p4.html">.....</a>
-				<a href="p4.html">7:30 pm</a>
-				<a href="p4.html">8:00 pm</a>
-				<a href="p4.html">8:30 pm</a>
-				<a href="p4.html">9:00 pm</a>
-				<a href="p4.html">9:30 pm</a>
-				<a href="p4.html">10:00 pm</a>
-				<a href="p4.html">10:30 pm</a>
-				<a href="p4.html">11:00 pm</a>
-				<a href="p4.html">11:30 pm</a>
-				<a href="p4.html">......</a>
+			<div class="dropdown">
+				<button align="center" id="button2" onclick="myFunction()" class="dropbtn" ><i class="fa fa-clock-o"></i>Time...</button>
+				<div id="myDropdown" class="dropdown-content">
+					<a href="p4.html">.....</a>
+					<a href="p4.html">7:30 pm</a>
+					<a href="p4.html">8:00 pm</a>
+					<a href="p4.html">8:30 pm</a>
+					<a href="p4.html">9:00 pm</a>
+					<a href="p4.html">9:30 pm</a>
+					<a href="p4.html">10:00 pm</a>
+					<a href="p4.html">10:30 pm</a>
+					<a href="p4.html">11:00 pm</a>
+					<a href="p4.html">11:30 pm</a>
+					<a href="p4.html">......</a>
+				</div>
+
 			</div>
 
-		</div>
+			<script>
+			/* When the user clicks on the button,
+			toggle between hiding and showing the dropdown content */
+			function myFunction() {
+				document.getElementById("myDropdown").classList.toggle("show");
+			}
 
-		<script>
-		/* When the user clicks on the button,
-		toggle between hiding and showing the dropdown content */
-		function myFunction() {
-			document.getElementById("myDropdown").classList.toggle("show");
-		}
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('.dropbtn')) {
 
-		// Close the dropdown if the user clicks outside of it
-		window.onclick = function(event) {
-			if (!event.target.matches('.dropbtn')) {
-
-				var dropdowns = document.getElementsByClassName("dropdown-content");
-				var i;
-				for (i = 0; i < dropdowns.length; i++) {
-					var openDropdown = dropdowns[i];
-					if (openDropdown.classList.contains('show')) {
-						openDropdown.classList.remove('show');
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+						if (openDropdown.classList.contains('show')) {
+							openDropdown.classList.remove('show');
+						}
 					}
 				}
 			}
-		}
 
-		</script>
+			</script>
 
-		<script>
+			<script>
 			function cFunct() {
-					document.getElementById("1").style.color = "red";
+				document.getElementById("1").style.color = "red";
 			}
-	</script>
-		<!---------------------------------------------------------------------->
+			</script>
+			<!---------------------------------------------------------------------->
 
-		<!--- <input class="
+			<!--- <input class="
 
-dropbtn1" style="float: left" type="submit" value="Current" ></input> -->
+			dropbtn1" style="float: left" type="submit" value="Current" ></input> -->
 
 			<!-- <div class="screen"> -->
 
 			<div class="container">
 
 
-		<!-- remember to put Handlebars templates within script tags so that the
-		     webpage doesn't attempt to load them as HTML -->
-		<script id="entry-template" type="text/x-handlebars-template">
+				<!-- remember to put Handlebars templates within script tags so that the
+				webpage doesn't attempt to load them as HTML -->
+				<script id="entry-template" type="text/x-handlebars-template">
 
-				<div class="project" id="project{{index}}">
-					<a href="#" class="thumbnail">
-						<table style="height:10%">
-						<tr>
-								<td style="width:5px">	{{index}}. </td>
-					<td>	{{title}} {{waitTime}} mins
-						<i style="font-size:24px" onclick="cFunct()" id="{{index}}" class="fa">&#xf004;</i>
-					</td>
-				</tr>
-			</table>
-					</a>
+					<div class="project" id="project{{index}}">
+						<a href="#" class="thumbnail">
+							<table style="height:10%">
+								<tr>
+									<td style="width:5px">	{{index}}. </td>
+									<td>	{{title}} {{waitTime}} mins
+										<i style="font-size:24px" onclick="cFunct()" id="{{index}}" class="fa">&#xf004;</i>
+									</td>
+								</tr>
+							</table>
+						</a>
+					</div>
+				</script>
 
+				<div id="templatedProjects">
+					<!-- we will inject templated project HTML code into here -->
 				</div>
-		</script>
-
-		    <div id="templatedProjects">
-		      <!-- we will inject templated project HTML code into here -->
-		    </div>
 
 			</div>
 
-					<a href="homepage.html">
-					<!--	<input style="margin-left: 160px" type="submit" value="HOME" ></input> -->
-					<button  class="dropbtn"><i class="fa fa-home"></i> Home</button>
-		  <!--  </div> -->
-</div>
-<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/handlebars-v4.0.12.js"></script>
-	<script src="js/lab4.js"></script>
+			<a href="homepage.html">
+				<!--	<input style="margin-left: 160px" type="submit" value="HOME" ></input> -->
+				<button  class="dropbtn"><i class="fa fa-home"></i> Home</button>
+				<!--  </div> -->
+			</div>
+			<script src="https://code.jquery.com/jquery.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/handlebars-v4.0.12.js"></script>
+			<script src="js/lab4.js"></script>
 
-</body>
-</html>
+		</body>
+		</html>
