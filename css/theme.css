@@ -122,6 +122,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-left:2vh;
   margin-top:-1vh;
   border-radius:5px;
+  letter-spacing: 3px;
 }
 
 .dropdown-content a {
@@ -257,11 +258,6 @@ height: 8%;
 #time{
   float:left;
   margin-left: 2vw;
-}
-
-#colon{
-  float:left;
-  margin-left: 9vw;
 }
 
 .alltime table{
