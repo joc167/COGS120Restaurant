@@ -29,13 +29,13 @@
 
 	<section id="intro">
 		<div class="intro-text">
-				<h1 align="center"> Wait Time @ <span id="chosetime"></span></h1>
+				<h1 align="center"> Wait Time @ <span id="datetime"></span></h1>
 		</div>
 	</section>
 
+
 	<div class="container" id="crwtTable">
-		<button align="center" class="current-btn" type="submit" onclick="javascript:window.location.href='current.html';" >
-			<i class="fa fa-chevron-circle-down"></i>&nbsp;Current</button>
+		<button align="center" onclick="window.location.href='current.html'" class="current-btn" type="submit" > <i class="fa fa-chevron-circle-down"></i>&nbsp;Current</button>
 		<div class="dropdown">
 			<button align="center" onclick="myFunction()" class="dropbtn" ><i class="fa fa-clock-o"></i>&nbsp;Time......</button>
 			<div id="myDropdown" class="dropdown-content">
@@ -94,32 +94,29 @@
 
 			</script>
 
-			<script>
-			function cFunct() {
-				document.getElementById("1").style.color = "red";
-			}
-			</script>
 			<!---------------------------------------------------------------------->
 
-			<div style="text-align: left;">
+			<div style="text-align: left;" class="current">
 				<!-- remember to put Handlebars templates within script tags so that the
 				webpage doesn't attempt to load them as HTML -->
 				<script id="entry-template" type="text/x-handlebars-template">
+
 					<tr>
 						<td>
-							<span id="time"> {{index}}.&nbsp&nbsp{{title}}</span>
-							<span id="wt">{{waitTime}}&nbspmin(s)
-							&nbsp<i onclick="cFunct()" id="{{index}}" class="fa buttonfav">&#xf004;</i></span>
+							<span onclick="javascript:window.location.href='p3.html';">
+								<span id="time"> {{index}}.&nbsp&nbsp{{title}}</span>
+								<span id="wt">{{waitTime}}&nbspmin(s)</span>
+							</span>
+							<span onclick="this.style.color = '#ff6868'" id="{{index}}" class="fa buttonfav">&#xf004;</span>
 						</td>
 					</tr>
+
 				</script>
 
 				<div class="list">
-					<a href="p3.html" class="thumbnail">
-						<table id="templatedProjects" >
+					<table id="templatedProjects" >
 					<!-- we will inject templated project HTML code into here -->
-						</table>
-					</a>
+					</table>
 				</div>
 
 			</div>
@@ -129,7 +126,7 @@
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/handlebars-v4.0.12.js"></script>
-		<script src="js/8pm.js"></script>
+		<script src="js/lab4.js"></script>
 
 		<!-- JavaScript Libraries -->
 		<script src="lib/jquery/jquery.min.js"></script>
