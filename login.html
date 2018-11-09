@@ -29,173 +29,66 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-    width: 100%;
+    width: 70vw;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin-bottom: 5vh;
     display: inline-block;
-    border: 1px solid #ccc;
     box-sizing: border-box;
+		border-radius: 5px;
+		border: none;
 }
 
+.login{
+	width: 70vw;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 7vh;
+	text-align:center;
+	line-height: 5vh;
+}
+
+.loginTitle{
+	margin-top: 10vh;
+}
+label {
+	color: white;
+	font-family: "Montserrat";
+	float:left;
+}
 /* Set a style for all buttons */
 button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
 }
 
 button:hover {
     opacity: 0.8;
 }
 
-/* Extra styles for the cancel button */
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
 
-/* Center the image and position the close button */
-
-
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-/* Add Zoom Animation */
-
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-}
 </style>
 </head>
+
 <body>
 
-<h2>Waitless Login </h2>
+<section id="intro" class="loginTitle">
+	<div class="intro-text">
+			<h1 align="center"> WAITLESS Login</h1>
+	</div>
+</section>
 
-
-
-<!--<form name="register">--
-<div class="register">
-
-    <label for="runame"><b>Create Username</b></label>
-  <!--  <input type="text" placeholder="Enter Username" name="uname" required> //-->
-  <!--    <input type="text" placeholder="Create Username" name="runame" >
-    <label for="rpsw"><b>Register Password</b></label>
-    <input id="nameField" type="password" placeholder="Create Password" name="rpsw" required>
-    <input id="passField" type="button" onclick="getUserName(this.form)" value="Create"/> //-->
-<!--      <input type="password" placeholder="Enter Password" name="psw" > -->
-<!--  </div> //-->
-<!-- <button onclick="window.location='current.html';">Login</button> //-->
-<!-- </form> -->
-<!--<script language="javascript">
-function getUserName(form) {
-var userid = document.getElementById('nameField').value;
-var userkey = document.getElementById('passField').value;
-</script>
-//-->
-<!--<div id="id01" class="modal"> //-->
-
-<!--  <form class="modal-content animate" action="/action_page.php"> //-->
-  <form name="login">
-
+<form name="login">
   <div class="login">
-	<!--	<label for="cuname"><b>Create Username</b></label>
-		<input type="text" placeholder="Enter Username" name="cuname" >
-		<label for="cpsw"><bcreate password Password</b></label>
-		<input type="password" placeholder="Enter Password" name="cpsw" required>
-		<input type="button" onclick="check(getUserName.form)" value="Create"/><i class="fa fa-home"></i></button>
--->
-
       <label for="uname"><b>Username</b></label>
-    <!--  <input type="text" placeholder="Enter Username" name="uname" required> //-->
-        <input type="text" placeholder="Enter Username" name="uname" >
+      <input type="text" placeholder="Enter Username" name="uname" >
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
-      <input type="button" class="current-btn" onclick="check(this.form)" value="Login"/></button>
-
-<!--      <input type="password" placeholder="Enter Password" name="psw" > -->
+      <input type="button" class="current-btn" onclick="check(this.form)" value="Login"/>
     </div>
-<!-- <button onclick="window.location='current.html';">Login</button> //-->
-  </form>
-<!-- </div> //-->
-
-<!--else if(form.uname.value == userid && form.psw.value == userkey)
-  {
-    window.open('current.html')
-  }
-else if( user = new nUser(userid, userkey);)
-  {
-    window.open('current.html')
-  }//-->
-
+</form>
 
 
 <script language="javascript">
@@ -226,16 +119,7 @@ var userkey = document.getElementById('cpsw').value;
 }
 </script>
 
-<!--<script>
-// Get the modal
-var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 </script> //-->
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/jquery/jquery-migrate.min.js"></script>
