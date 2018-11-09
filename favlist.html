@@ -41,11 +41,16 @@
 				<script id="entry-template" type="text/x-handlebars-template" src="js/lab4.js">
 					<tr>
 						<td>
-							<span onclick="javascript:window.location.href='p3.html';">
-								<span id="time"> {{title}}</span>
-								<span id="wt">{{waitTime}}&nbspmin(s)</span>
+							<span onclick="javascript:window.location.href='p3.html';
+							localStorage.setItem('rstrName', complexData[{{index}}-1].title);">
+								<span id="time"> &nbsp&nbsp&nbsp{{title}}</span>
+								<span id="wt">{{waitTime}}&nbsp min(s)</span>
 							</span>
-							<span  id="{{index}}" class="fa buttonfav">&#xf004;</span>
+							<span style="color: #ff6868;"
+							onclick="javascript:this.style.color='#1dc8cd';
+							localStorage.removeItem(complexData[{{index}}-1].title);
+							window.location.href='favlist.html';"
+							id="{{index}}" class="fa buttonfav">&#xf004;</span>
 						</td>
 					</tr>
 
@@ -56,7 +61,7 @@
 					<!-- we will inject templated project HTML code into here -->
 					</table>
 				</div>
-				<button class="backbtn" onclick="localStorage.clear();console.log('hi')"> clear LocalStorage </button>
+				<button class="backbtn" onclick="console.log('clear');localStorage.clear();window.location.href='favlist.html';"> Clear List </button>
 			</div>
 
 

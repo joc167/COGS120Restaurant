@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .buttonfav{
-  margin-top: 0.5vh;
+  margin-top: 0.4vh;
   margin-left: 67vw;
   position: absolute;
 }
@@ -271,7 +271,7 @@ height: 8%;
 }
 
 .alltime table{
-  margin-top:2vh;
+  margin-top:5vh;
   font-size: 22px;
 }
 

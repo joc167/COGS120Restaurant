@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title> home </title>
+	<title> all time </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/theme.css">
@@ -28,9 +28,13 @@
 
   <section id="intro">
     <div class="intro-text">
-        <h1 align="center"> Wait Time For </span></h1>
+        <h1 align="center"> Wait Time For <br><span id="rstrName"></span></h1>
     </div>
   </section>
+
+  <script>
+		document.getElementById("rstrName").innerHTML = localStorage.getItem("rstrName");
+	</script>
 
   <div class="container">
 			<!-- remember to put Handlebars templates within script tags so that the
@@ -38,12 +42,15 @@
 			<script id="entry-template" type="text/x-handlebars-template">
 				<tr>
 					<td>
-            <span id='time' style="letter-spacing: 3px;">&nbsp&nbsp {{time}}&nbsp&nbsp:</span>
-            <span id='wt' style="letter-spacing: 2px;">{{waitTime}} min(s) &nbsp</span></td>
+            <span onclick="javascript:window.location.href='p3.html';
+            localStorage.setItem('rstrName', complexData[{{index}}-1].title);" id='time' style="letter-spacing: 3px;">
+            &nbsp&nbsp {{time}}&nbsp&nbsp:</span>
+            <span id='wt' style="letter-spacing: 2px;">{{waitTime}} min(s) &nbsp</span>
+          </td>
 				</tr>
 			</script>
 
-			<div class="list  alltime" >
+			<div class="list alltime" >
         <table id="templatedProjects" style="text-align:center;">
       	<!-- we will inject templated project HTML code into here -->
         </table>
