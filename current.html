@@ -105,25 +105,25 @@
 			</script>
 			<!---------------------------------------------------------------------->
 
-			<div style="text-align: left;">
+			<div style="text-align: left;" class="current">
 				<!-- remember to put Handlebars templates within script tags so that the
 				webpage doesn't attempt to load them as HTML -->
 				<script id="entry-template" type="text/x-handlebars-template">
 					<tr>
 						<td>
-							<span id="time"> {{index}}.&nbsp&nbsp{{title}}</span>
-							<span id="wt">{{waitTime}}&nbspmin(s)
-							&nbsp<i onclick="cFunct()" id="{{index}}" class="fa buttonfav">&#xf004;</i></span>
+							<span onclick="javascript:window.location.href='p3.html';">
+								<span id="time"> {{index}}.&nbsp&nbsp{{title}}</span>
+								<span id="wt">{{waitTime}}&nbspmin(s)</span>
+							</span>
+							<span onclick="cFunct()" id="{{index}}" class="fa buttonfav">&#xf004;</span>
 						</td>
 					</tr>
 				</script>
 
 				<div class="list">
-					<a href="p3.html" class="thumbnail">
-						<table id="templatedProjects" >
+					<table id="templatedProjects" >
 					<!-- we will inject templated project HTML code into here -->
-						</table>
-					</a>
+					</table>
 				</div>
 
 			</div>
