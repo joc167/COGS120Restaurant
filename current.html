@@ -98,26 +98,23 @@
 
 			</script>
 
-			<script>
-			function cFunct() {
-				document.getElementById("1").style.color = "red";
-			}
-			</script>
 			<!---------------------------------------------------------------------->
 
 			<div style="text-align: left;" class="current">
 				<!-- remember to put Handlebars templates within script tags so that the
 				webpage doesn't attempt to load them as HTML -->
 				<script id="entry-template" type="text/x-handlebars-template">
+
 					<tr>
 						<td>
 							<span onclick="javascript:window.location.href='p3.html';">
 								<span id="time"> {{index}}.&nbsp&nbsp{{title}}</span>
 								<span id="wt">{{waitTime}}&nbspmin(s)</span>
 							</span>
-							<span onclick="cFunct()" id="{{index}}" class="fa buttonfav">&#xf004;</span>
+							<span onclick="this.style.color = '#ff6868'" id="{{index}}" class="fa buttonfav">&#xf004;</span>
 						</td>
 					</tr>
+
 				</script>
 
 				<div class="list">
