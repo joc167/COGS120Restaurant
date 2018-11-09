@@ -104,14 +104,13 @@
 				<!-- remember to put Handlebars templates within script tags so that the
 				webpage doesn't attempt to load them as HTML -->
 				<script id="entry-template" type="text/x-handlebars-template">
-
 					<tr>
 						<td>
 							<span onclick="javascript:window.location.href='p3.html';">
 								<span id="time"> {{index}}.&nbsp&nbsp{{title}}</span>
 								<span id="wt">{{waitTime}}&nbspmin(s)</span>
 							</span>
-							<span onclick="this.style.color = '#ff6868'" id="{{index}}" class="fa buttonfav">&#xf004;</span>
+							<span onclick="javascript:this.style.color='#ff6868'; localStorage.setItem(complexData[{{index}}].title, JSON.stringify(complexData[{{index}}]));" id="{{index}}" class="fa buttonfav">&#xf004;</span>
 						</td>
 					</tr>
 
@@ -125,7 +124,7 @@
 
 			</div>
 		</div>
-	</div>
+
 
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>

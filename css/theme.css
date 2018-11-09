@@ -278,3 +278,7 @@ height: 8%;
 .alltime span,.current span{
   color: #1dc8cd;
 }
+
+#FavoritesList{
+  margin-top:2vh;
+}
